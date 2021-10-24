@@ -1,7 +1,7 @@
 # Reverse Cipher
 # https://www.nostarch.com/crackingcodes/ (BSD Licenced)
 
-import math, pyperclip
+import math
 
 
 def main():
@@ -11,8 +11,6 @@ def main():
     plaintext = decrypt_message(my_key, my_message)
 
     print(plaintext + "|")
-
-    pyperclip.copy(plaintext)
 
 
 def decrypt_message(key, message):
