@@ -1,9 +1,3 @@
-# Reverse Cipher
-# https://www.nostarch.com/crackingcodes/ (BSD Licenced)
-
-import pyperclip
-
-
 def main():
     my_message = 'Common sense is not so common'
     my_key = 8
@@ -11,8 +5,6 @@ def main():
     ciphertext = encrypt_message(my_key, my_message)
 
     print(ciphertext + '|')
-
-    pyperclip.copy(ciphertext)
 
 
 def encrypt_message(key, message):

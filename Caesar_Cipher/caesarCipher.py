@@ -1,20 +1,11 @@
-# Caesar Cipher
-# https://www.nostarch.com/crackingcodes (BSD Licensed)
-
-
-# The string to be encrypted/decrypted:
 message = 'This is my secret message.'
 
-# The encryption/decryption key:
 key = 13
 
-# Whether the program encrypts or decrypts:
-mode = 'encrypt' # Set to either 'encrypt' or 'decrypt'.
+mode = 'encrypt'
 
-# Every possible symbol that can be encrypted:
 SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !?.'
 
-# Stores the encrypted/decrypted form of the message:
 translated = ''
 
 for symbol in message:
@@ -22,15 +13,11 @@ for symbol in message:
     if symbol in SYMBOLS:
         symbolIndex = SYMBOLS.find(symbol)
 
-
-
-        # Perform encryption/decryption:
         if mode == 'encrypt':
             translatedIndex = symbolIndex + key
         elif mode == 'decrypt':
             translatedIndex = symbolIndex - key
 
-        # Handle wrap-around, if needed:
         if translatedIndex >= len(SYMBOLS):
             translatedIndex = translatedIndex - len(SYMBOLS)
         elif translatedIndex < 0:
@@ -38,9 +25,7 @@ for symbol in message:
 
         translated = translated + SYMBOLS[translatedIndex]
     else:
-        # Append the symbol without encrypting/decrypting:
         translated = translated + symbol
 
-# Output the translated string:
 print(translated)
 

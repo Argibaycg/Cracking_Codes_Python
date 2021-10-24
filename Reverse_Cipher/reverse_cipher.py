@@ -1,6 +1,3 @@
-# Reverse Cipher
-# https://www.nostarch.com/crackingcodes/ (BSD Licenced)
-
 message = input('Shh, what do you want to hide?:')
 translated = ''
 
